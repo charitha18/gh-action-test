@@ -1,0 +1,11 @@
+name: test
+on: workflow_dispatch
+jobs:
+  print:
+    runs-on: windows
+    steps:
+      -name: print greeting
+       run: echo "hello"
+      -name: print bye
+       run: echo "bye"
+    
