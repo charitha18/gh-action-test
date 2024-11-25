@@ -16,7 +16,7 @@ jobs:
            $GitHash = "${{ github.sha }}"
            $ShortGitHash = $GitHash.substring(0,7)
            $ProductVersion = "${{ github.run_number }}"
-           $ShortProductVersion = ${{ env.BUILD_NUMBER }} -replace $GitHash, $ShortGitHash
+           $ShortProductVersion = "1.0.0.${{ github.run_number }}.${{ github.sha }}" -replace $GitHash, $ShortGitHash
            echo $ShortProductVersion
            echo $GitHash
            echo $ShortGitHash
