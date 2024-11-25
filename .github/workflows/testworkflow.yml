@@ -15,7 +15,7 @@ jobs:
            $ShortGitHash = $GitHash.substring(0,7)
            $ProductVersion = "${{ github.run_number }}"
            $ShortProductVersion = $buildNumber -replace $GitHash, $ShortGitHash
-           echo "BUILD_NUMBER=$ShortProductVersion" >> $GITHUB_ENV
+           echo "BUILD_NUMBER=$ShortProductVersion" >> $env:$GITHUB_ENV
            echo $env:BUILD_NUMBER
            
            
