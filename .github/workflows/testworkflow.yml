@@ -8,7 +8,8 @@ jobs:
         run: echo "hello"
       - name: print bye
         run: echo "bye"
-      - name: Version POM's    
+      - name: Version POM's
+        shell: pwsh
         run: |
            $GitHash = "${{ github.sha }}"
            $ShortGitHash = $GitHash.substring(0,7)
