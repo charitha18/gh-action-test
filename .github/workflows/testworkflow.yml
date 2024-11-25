@@ -14,3 +14,5 @@ jobs:
            $GitHash = "${{ github.sha }}"
            $ShortGitHash = $GitHash.substring(0,7)
            $ProductVersion = "${{ github.run_number }}"
+           $ShortProductVersion = $ProductVersion -replace $GitHash, $ShortGitHash
+           echo $ShortProductVersion
