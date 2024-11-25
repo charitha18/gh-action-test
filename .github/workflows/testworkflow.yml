@@ -11,6 +11,7 @@ jobs:
       - name: Version POM's
         shell: pwsh
         run: |
+           $buildNumber = "1.0.0.${{ github.run_number }}.${{ github.sha }}"
            $GitHash = "${{ github.sha }}"
            $ShortGitHash = $GitHash.substring(0,7)
            $ProductVersion = "${{ github.run_number }}"
