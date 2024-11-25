@@ -16,3 +16,5 @@ jobs:
            $ProductVersion = "${{ github.run_number }}"
            $ShortProductVersion = $ProductVersion -replace $GitHash, $ShortGitHash
            echo $ShortProductVersion
+           echo $GitHash
+           echo $ShortGitHash
